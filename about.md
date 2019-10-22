@@ -1,11 +1,74 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
+hero_img: hero.jpg
+description: Se avete un problema sul web, noi abbiamo la soluzione!
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<!-- Start Hero -->
+<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ page.hero_img }}') no-repeat; background-size: cover;">
+    <div class="hero-content">
+        <div class="container-fluid">
+            <div class="hero-content-inner">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div style="min-height: 350px;">&nbsp;</div>
+    </div>
+</div>
+<!-- End Hero -->
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+<!-- Start About -->
+<div id="about" class="about">
+    <div class="container-fluid">
+        <h2 class="section-title">About Us</h2>
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Welcome to DentistSmile</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis nostrum ab vero temporibus magnam, delectus!</p>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-heart"><use xlink:href="#icon-heart"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam explicabo unde doloremque quo, fugit, nisi.</p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-medkit"><use xlink:href="#icon-medkit"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam explicabo unde doloremque quo, fugit, nisi.</p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <div class="media-left">
+                        <div class="boxed-icon">
+                            <svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam explicabo unde doloremque quo, fugit, nisi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ site.baseurl }}/img/about.jpg" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About -->

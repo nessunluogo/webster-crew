@@ -1,11 +1,45 @@
 ---
-layout: page
+layout: default
 title: Crew
 permalink: /crew/
+hero_img: hero.jpg
+description: I membri della crew, al vostro servizio!
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<!-- Start Hero -->
+<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ page.hero_img }}') no-repeat; background-size: cover;">
+    <div class="hero-content">
+        <div class="container-fluid">
+            <div class="hero-content-inner">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div style="min-height: 350px;">&nbsp;</div>
+    </div>
+</div>
+<!-- End Hero -->
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+<!-- Start Our team -->
+<div id="team" class="team"> 
+    <h2 class="section-title">Our Team</h2> 
+    <div id="team-carousel">
+    {% for member in site.data.team %}
+        <div class="expandable-box">
+            <div class="expandable-box-top">
+                <img src="{{ site.baseurl }}/img/{{ member.image }}" alt="{{ member.name }}">
+                <h4>{{ member.name }}</h4>
+            </div>
+            <div class="expandable-box-bottom">
+                <a href="mailto:{{ member.email }}" data-toggle="tooltip" data-placement="bottom" title="{{ member.email }}"><svg class="icon icon-envelope"><use xlink:href="#icon-envelope"></use></svg></a>
+                </a>
+                <a href="tel:{{ member.phone }}" data-toggle="tooltip" data-placement="bottom" title="{{ member.phone }}"><svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg></a>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- End Our team -->

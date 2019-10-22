@@ -1,14 +1,64 @@
 # Site settings
-title: Webster Crew
-email: info@webstercrew.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://webstercrew.com" # the base hostname & protocol for your site
-twitter_username: webstercrew
-github_username:  webstercrew
+title: Webster Crew | Dental Jekyll Theme
+description: "Soluzioni tecnologiche per il web di domani."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the name of your domain
+logo_url: /svg/min/logo.svg
+
+# Hero
+hero: 
+    hero_img: hero.jpg
+    hero_title: Webster Crew
+    hero_description: Soluzioni tecnologiche per il web di domani.
+
+# Contact form
+api_token: # Enter API token here
+
+# Contact info
+contact:
+    phone: +39.329.354.0746
+    email: lorenzo@webstercrew.net
+    address: Via Giovanni Nicotera, 17<br />84080 - Pellezzano (SA) - Italy
+
+# Opening hours
+monday_friday: 9:00 – 18:00
+saturday: 10:00 – 17:00
+sunday: 10:00 – 15:00
+
+# Testimonials
+testimonials:
+    testimonials_img: parallax.jpg
+
+# Map
+map:
+    zoom: 17
+    address: Via Giovanni Nicotera, 17, 84080, Pellezzano (SA), Italy
+    address_details: svg/min/logo.svg
+
+# Social settings
+facebook: https://facebook.com/webstercrew
+twitter: https://twitter.com/webstercrew
+instagram: https://instagram.com/webstercrew
+youtube: https://youtube.com/webstercrew
+skype: skype:webstercrew?userinfo
+feed: no
+
+# Footer
+copyright: © 2019 Webster Crew - All rights reserved
 
 # Build settings
 markdown: kramdown
+
+exclude: [
+    package.json,
+    Gruntfile.js,
+    node_modules,
+    .sass-cache,
+    Gemfile,
+    Gemfile.lock,
+    .gitignore
+]
+
+# Theme Settings
+analytics: 
+google_verification:
