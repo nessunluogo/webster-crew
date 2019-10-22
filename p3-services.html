@@ -1,0 +1,43 @@
+---
+layout: default
+title: Services
+permalink: /services/
+hero_img: hero.jpg
+description: I membri della crew, al vostro servizio!
+---
+
+<!-- Start Hero -->
+<div class="hero" style="background: url('{{ site.baseurl }}/img/{{ page.hero_img }}') no-repeat; background-size: cover;">
+    <div class="hero-content">
+        <div class="container-fluid">
+            <div class="hero-content-inner">
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div style="min-height: 350px;">&nbsp;</div>
+    </div>
+</div>
+<!-- End Hero -->
+
+<!-- Start Services -->
+<div id="treatments" class="treatments">
+    <div class="container-fluid">
+        <h2 class="section-title">Services</h2>
+
+        <div class="row">
+            {% for treatment in site.data.treatments %}
+                <div class="col-sm-6 col-md-4">
+                    <div class="icon-box">
+                        <svg class="icon {{ treatment.icon }}"><use xlink:href="#{{ treatment.icon }}"></use></svg>
+                        <h4>{{ treatment.title }}</h4>
+                        <p>{{ treatment.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- End Services -->
